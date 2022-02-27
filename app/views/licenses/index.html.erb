@@ -1,0 +1,42 @@
+<%= form_tag "/licenses/new", method: :post do %>
+  <div>
+    <%= label_tag :paid, 'Paid till: ' %>
+    <%= text_field_tag :paid_till %>
+  </div>
+  <div>
+    <%= label_tag :max, 'Maximal version: ' %>
+    <%= text_field_tag :max_version %>
+  </div>
+  <div>
+    <%= label_tag :min, 'Minimal version: ' %>
+    <%= text_field_tag :min_version %>
+  </div>
+  <div>
+    <%= button_tag(type: 'submit') do %>
+      Check
+    <% end %>
+  </div>
+<% end %>
+<br>
+<% if @error.nil? %>
+<div>
+  <a>Paid till:</a>
+  <%= @paid_till %>
+</div>
+<div>
+  <a>Max version:</a>
+  <%= @max_version %>
+</div>
+<div>
+  <a>Min version:</a>
+  <%= @min_version %>
+</div>
+<div>
+  <a>Possible versions:</a>
+  <%= @versions_string %>
+</div>
+<% else %>
+<div>
+  <%= @error %>
+</div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  paid_till: MyString
+  string: MyString
+  max_version: MyString
+  string: MyString
+  min_version: MyString
+  string: MyString
+
+two:
+  paid_till: MyString
+  string: MyString
+  max_version: MyString
+  string: MyString
+  min_version: MyString
+  string: MyString
